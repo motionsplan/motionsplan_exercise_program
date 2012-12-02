@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Motionsplan Exercise Program feature.
+ */
+
+include_once 'motionsplan_exercise_program.features.inc';
