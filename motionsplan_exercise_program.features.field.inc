@@ -20,6 +20,14 @@ function motionsplan_exercise_program_field_default_fields() {
         0 => 'node',
       ),
       'field_name' => 'body',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
       'indexes' => array(
         'format' => array(
           0 => 'format',
@@ -43,6 +51,12 @@ function motionsplan_exercise_program_field_default_fields() {
           'settings' => array(),
           'type' => 'text_default',
           'weight' => '-3',
+        ),
+        'exercise_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -71,7 +85,7 @@ function motionsplan_exercise_program_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '-3',
+        'weight' => '1',
       ),
     ),
   );
@@ -133,11 +147,17 @@ function motionsplan_exercise_program_field_default_fields() {
           'label' => 'above',
           'module' => 'entityreference',
           'settings' => array(
-            'links' => TRUE,
+            'links' => 0,
             'view_mode' => 'teaser',
           ),
           'type' => 'entityreference_entity_view',
           'weight' => '-2',
+        ),
+        'exercise_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -166,7 +186,7 @@ function motionsplan_exercise_program_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'entityreference_autocomplete',
-        'weight' => '31',
+        'weight' => '2',
       ),
     ),
   );

@@ -2,6 +2,7 @@ name = Motionsplan Exercise Program
 description = Adds functionality to add exercises to programs
 core = 7.x
 package = Motionsplan
+php = 5.2.4
 version = 7.x-0.1
 project = motionsplan_exercise_program
 dependencies[] = ctools

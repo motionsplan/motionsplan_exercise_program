@@ -45,12 +45,6 @@ function motionsplan_exercise_program_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = FALSE;
-  /* Overskrift: Global: Tekstområde */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'Vi er ved at bygge om - bl.a. genopbygger vi den måde, der skal laves træningsprogrammer på. Dine gamle programmer kan du finde på <a href="http://old.motionsplan.dk">old.motionsplan.dk</a>. Tilmeld dig <a href="/nyhedsbrev">nyhedsbrevet</a>, hvis du vil have besked, når det hele er klar.';
-  $handler->display->display_options['header']['area']['format'] = '1';
   /* Forbindelse: Indhold: Forfatter */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
@@ -213,7 +207,6 @@ function motionsplan_exercise_program_views_default_views() {
     t('‹ forrige'),
     t('næste ›'),
     t('sidste »'),
-    t('Vi er ved at bygge om - bl.a. genopbygger vi den måde, der skal laves træningsprogrammer på. Dine gamle programmer kan du finde på <a href="http://old.motionsplan.dk">old.motionsplan.dk</a>. Tilmeld dig <a href="/nyhedsbrev">nyhedsbrevet</a>, hvis du vil have besked, når det hele er klar.'),
     t('forfatter'),
     t('Titel'),
     t('Introduktion til øvelse'),
