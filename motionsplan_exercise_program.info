@@ -36,3 +36,4 @@ features[variable][] = node_options_trainingprogram
 features[variable][] = node_preview_trainingprogram
 features[variable][] = node_submitted_trainingprogram
 features[views_view][] = exercise_list_program
+files[] = motionsplan_exercise_program.migrate.inc
