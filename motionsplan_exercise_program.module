@@ -5,3 +5,17 @@
  */
 
 include_once 'motionsplan_exercise_program.features.inc';
+
+/**
+ * Implements hook_migrate_api().
+ */
+function motionsplan_exercise_program_migrate_api() {
+  $api = array(
+    'api' => 2,
+    'migrations' => array(
+      'MotionsplanProgramNode' => array('class_name' => 'MotionsplanProgramNode'),
+    ),
+  );
+
+  return $api;
+}

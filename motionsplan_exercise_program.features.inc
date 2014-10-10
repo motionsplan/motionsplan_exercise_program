@@ -5,21 +5,6 @@
  */
 
 /**
- * Implements hook_migrate_api().
- */
-function motionsplan_exercise_program_migrate_api() {
-  $api = array(
-    'api' => 2,
-    'migrations' => array(
-      'MotionsplanProgramNode' => array('class_name' => 'MotionsplanProgramNode'),
-    ),
-  );
-
-  return $api;
-}
-
-
-/**
  * Implements hook_ctools_plugin_api().
  */
 function motionsplan_exercise_program_ctools_plugin_api($module = NULL, $api = NULL) {
