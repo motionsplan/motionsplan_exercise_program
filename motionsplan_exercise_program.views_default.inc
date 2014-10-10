@@ -25,7 +25,7 @@ function motionsplan_exercise_program_views_default_views() {
   $handler->display->display_options['title'] = 'Træningsprogrammer';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
-  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
@@ -122,10 +122,12 @@ function motionsplan_exercise_program_views_default_views() {
   $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
   $handler->display->display_options['filters']['rid']['field'] = 'rid';
   $handler->display->display_options['filters']['rid']['relationship'] = 'uid';
-  $handler->display->display_options['filters']['rid']['value'] = array(
-    3 => '3',
-    4 => '4',
-  );
+  $handler->display->display_options['filters']['rid']['operator'] = 'not empty';
+  /* Filter criterion: Content: Promoted to front page */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'node';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['path'] = 'exerciseprogram/publiclist';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Træningsprogrammer';
@@ -189,11 +191,8 @@ function motionsplan_exercise_program_views_default_views() {
   $handler->display->display_options['title'] = 'Alle træningsprogrammer i systemet';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['access'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'role';
-  $handler->display->display_options['access']['role'] = array(
-    3 => '3',
-    4 => '4',
-  );
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'edit any trainingprogram content';
   $handler->display->display_options['path'] = 'exerciseprogram/all';
   $export['exercise_list_program'] = $view;
 
