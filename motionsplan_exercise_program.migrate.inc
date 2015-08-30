@@ -7,8 +7,8 @@
 
 class MotionsplanProgramNode extends Migration {
 
-  public function __construct() {
-    parent::__construct();
+  public function __construct(array $arguments = array()) {
+    parent::__construct($arguments);
     $this->description = t('Import exercise program nodes.');
     $this->dependencies = array('MotionsplanExerciseNode');
 

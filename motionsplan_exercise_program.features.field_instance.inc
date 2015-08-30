@@ -127,17 +127,19 @@ function motionsplan_exercise_program_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'inline_entity_form',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 1,
-        'references_dialog_edit' => 1,
-        'references_dialog_search' => 1,
-        'references_dialog_search_view' => '',
-        'size' => 60,
+        'fields' => array(),
+        'type_settings' => array(
+          'allow_existing' => 1,
+          'delete_references' => 0,
+          'label_plural' => 'øvelser',
+          'label_singular' => 'øvelse',
+          'match_operator' => 'CONTAINS',
+          'override_labels' => 1,
+        ),
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'inline_entity_form',
       'weight' => 2,
     ),
   );
