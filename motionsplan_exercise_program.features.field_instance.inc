@@ -10,7 +10,7 @@
 function motionsplan_exercise_program_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-trainingprogram-body'
+  // Exported field_instance: 'node-trainingprogram-body'.
   $field_instances['node-trainingprogram-body'] = array(
     'bundle' => 'trainingprogram',
     'default_value' => NULL,
@@ -88,7 +88,7 @@ function motionsplan_exercise_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-trainingprogram-field_program_exercises'
+  // Exported field_instance: 'node-trainingprogram-field_program_exercises'.
   $field_instances['node-trainingprogram-field_program_exercises'] = array(
     'bundle' => 'trainingprogram',
     'default_value' => NULL,
